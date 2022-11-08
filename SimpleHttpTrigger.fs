@@ -12,5 +12,8 @@ module SimpleHttpTrigger =
   [<FunctionName ("SimpleHttpTrigger")>]
   let run ([<HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)>]req: HttpRequest) (log: ILogger) =
     async {
-      log.LofInformation("F# HTTP trigger function processed a request.")
+      log.LogInformation("F# HTTP trigger function processed a request.")
+      let responseMessage : string = "Hello world!"
+      return OkObjectResult(responseMessage) :> IActionResult
     } |> Async.StartAsTask
+    
