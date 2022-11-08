@@ -13,7 +13,7 @@
     <None Include="local.settings.json" Condition="Exists('local.settings.json')">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <CopyToPublishDirectory>Never</CopyToPublishDirectory>
-      <Compile Include="UnitConverter.fs" />
     </None>
+    <Compile Include="UnitConverter.fs" />
   </ItemGroup>
 </Project>

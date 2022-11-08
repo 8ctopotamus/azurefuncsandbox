@@ -11,8 +11,9 @@ Messing around with Azure HTTP Functions in `F#`.
 `http://localhost:7071/api/SimpleHttpTrigger`
 
 ## Resources:
-
-### [Writing Azure Functions in F#](https://medium.com/datarisk-io/introdu%C3%A7%C3%A3o-ao-azure-functions-em-f-e083727662ed)
+* [MS Azure Functions Reference](https://learn.microsoft.com/en-us/azure/azure-functions/functions-reference-fsharp)
+* [Writing Azure Functions in F#](https://medium.com/datarisk-io/introdu%C3%A7%C3%A3o-ao-azure-functions-em-f-e083727662ed)
+* [Deploying F# Azure Functions](https://medium.com/datarisk-io/deploying-f-azure-functions-93ad5cebe8d4)
 
 #### Create a new function:
 
@@ -67,11 +68,13 @@ Messing around with Azure HTTP Functions in `F#`.
     <None Include="local.settings.json" Condition="Exists('local.settings.json')">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <CopyToPublishDirectory>Never</CopyToPublishDirectory>
-      <Compile Include="MyFuncName.fs" />
     </None>
+    <Compile Include="MyFuncName.fs" />
   </ItemGroup>
 </Project>
-
 ```
 
-### [Deploying F# Azure Functions](https://medium.com/datarisk-io/deploying-f-azure-functions-93ad5cebe8d4)
+Next create a new file for the function's code: `UnitConverter.fs`. Boilerplace code can be found here:
+
+### Deployment
+...
