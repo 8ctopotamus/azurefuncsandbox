@@ -1,4 +1,4 @@
-﻿// https://www.youtube.com/watch?v=c7eNDJN758U&t=1649s
+﻿// Walkthrough: https://www.youtube.com/watch?v=c7eNDJN758U&t=1649s
 
 open System
 
@@ -235,20 +235,108 @@ open System
 // seq_stuff()
 
 // map stuff
-let map_stuff() =
-  let customers = 
-    Map.empty
-      .Add("Bob", 100.50)
-      .Add("Sally", 1.10)
-      .Add("Zeke", 30.43)
+// let map_stuff() =
+//   let customers = 
+//     Map.empty
+//       .Add("Bob", 100.50)
+//       .Add("Sally", 1.10)
+//       .Add("Zeke", 30.43)
 
-  printfn "%A" customers
-  printfn "# of Customers %i" customers.Count
+//   printfn "%A" customers
+//   printfn "# of Customers %i" customers.Count
 
-  let bob = customers.TryFind "Bob"
-  printfn "Bob owes us: %.2f" bob.Value
+//   let cust = customers.TryFind "Bob"
+//   printfn "Bob owes us: %.2f" cust.Value
+//   printfn "Bob owes us: %.2f" customers.["Bob"]
+
+//   match cust with 
+//     | Some x -> printfn "Balance: %.2f" x
+//     | None -> printfn "Not found"
+
+//   if customers.ContainsKey "Bob" then
+//     printfn "Bob was found"
+  
+//   let custs2 = Map.remove "Zeke" customers
+//   printfn "%A" custs2
+//   printfn "# of Customers %i" custs2.Count
+
+// map_stuff()
+
+// generics - allows you to use any datatype in a func
+// let add_stuff<'T> x y =
+//   printfn "%A" (x + y)
+
+// let generic_stuff() =
+//   add_stuff<float> 3.9 2.2
+//   add_stuff<int> 3 2
+
+// generic_stuff()
 
 
-map_stuff()
+// Exception stuff
+// let exception_stuff() =
+//   let divide x y =
+//     try 
+//       if y = 0 then 
+//         raise (DivideByZeroException "Can't Divide by 0")
+//       else
+//         printfn "%i / %i = %i" x y (x / y)
+//     with 
+//       | :? DivideByZeroException as ex -> printfn "Can't Divide by Zero"
+    
+//   divide 5 4
+//   divide 5 0
+
+// exception_stuff()
+
+
+// structs - allows you to create your own datatype
+// type Rectangle = struct
+//   val Length : float
+//   val Width : float 
+
+//   new (length, width) =
+//     { Length = length; Width = width }
+// end
+
+// let struct_stuff() =
+//   let area(shape: Rectangle) = 
+//     shape.Length * shape.Width
+
+//   let rect = new Rectangle (10.5, 20.5)
+//   let rect_area = area rect
+//   printfn "%A" rect
+//   printfn "Area: %.2f" rect_area
+
+
+// class stuff
+type Animal = class
+  val Name : string
+  val Height : float
+  val Weight : float
+
+  new (name, height, weight) =
+   { Name = name; Height = height; Weight = weight }
+
+  member x.Run =
+    printfn "%s Runs" x.Name
+end
+
+type Dog(name, height, weight) =
+  inherit Animal(name, height, weight)
+
+  member x.Bark =
+    printfn "%s Barks" x.Name
+
+let class_stuff() =
+  let spot = new Animal("Spot", 20.5, 10.5)
+  spot.Run
+
+  let bowser = new Dog("Bowser", 20.5, 40.5)
+  bowser.Run
+  bowser.Bark
+
+class_stuff()
+
 
 // Console.ReadKey() |> ignore

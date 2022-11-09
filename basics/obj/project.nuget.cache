@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zJbj1bQQv+pB0E+55PUE128zWYSjGz4BqqFlQYHV23pWoAbZO602sPnJL06mTuAX9Dm71QZNand3rBgyuAu0iA==",
+  "dgSpecHash": "6n3/5POPhZQSXMz2nETZvlAdZ2GEnhpuRc7lxcVx6+g/HmYtZYUSLxCXXgDoOet58/UJZ9htydCptXnURZVltw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Josh\\code\\braustin\\fsharpsandbox\\fsharpsandbox.fsproj",
+  "projectFilePath": "C:\\Users\\Josh\\code\\braustin\\fsharpsandbox\\basics\\fsharpsandbox.fsproj",
   "expectedPackageFiles": [
     "C:\\Users\\Josh\\.nuget\\packages\\fsharp.core\\6.0.4\\fsharp.core.6.0.4.nupkg.sha512"
   ],

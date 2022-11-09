@@ -118,11 +118,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Josh\\code\\braustin\\fsharpsandbox\\fsharpsandbox.fsproj",
+      "projectUniqueName": "C:\\Users\\Josh\\code\\braustin\\fsharpsandbox\\basics\\fsharpsandbox.fsproj",
       "projectName": "fsharpsandbox",
-      "projectPath": "C:\\Users\\Josh\\code\\braustin\\fsharpsandbox\\fsharpsandbox.fsproj",
+      "projectPath": "C:\\Users\\Josh\\code\\braustin\\fsharpsandbox\\basics\\fsharpsandbox.fsproj",
       "packagesPath": "C:\\Users\\Josh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Josh\\code\\braustin\\fsharpsandbox\\obj\\",
+      "outputPath": "C:\\Users\\Josh\\code\\braustin\\fsharpsandbox\\basics\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Josh\\AppData\\Roaming\\NuGet\\NuGet.Config"
