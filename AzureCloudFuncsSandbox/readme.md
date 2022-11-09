@@ -2,6 +2,8 @@
 
 Messing around with Azure HTTP Functions in `F#`.
 
+[Example of connecting MSAL](https://dev.azure.com/braustin-holdings/Main/_git/pipedrive-facade?path=/src/seed-customers/Program.fs)
+
 **To run locally**
 
 `dotnet build && func host start`
